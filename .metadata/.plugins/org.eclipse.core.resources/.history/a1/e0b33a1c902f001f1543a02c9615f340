@@ -1,0 +1,41 @@
+package test;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class CalculatorServlet
+ */
+@WebServlet("/calculator")
+public class CalculatorServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//화면에서 입력한 두 수와 선택한 연산자를 가져오기
+		//String --> int 변환처리
+		int no1 = Integer.parseInt(request.getParameter("no1"));
+		int no2 = Integer.valueOf(request.getParameter("no2"));
+		String operator = request.getParameter("operator");
+	
+		//연산처리: 비지니스로직
+		
+	}
+
+	void calculate(int no1, int no2, String operator) {
+		
+		
+	}
+	
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

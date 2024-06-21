@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="../index.html">홈화면</a>
+
+<hr>
+<h2>게시글쓰기</h2>
+
+<table border='1'>
+<colgroup>
+	<col width="200px">
+	<col width="800px">
+</colgroup>
+<tr><th>작성자</th>
+	<td><input type="text" name="writer"></td>
+</tr>
+
+<tr><th>제목</th>
+	<td><input type="text" name="title"></td>
+</tr>
+
+<tr><th>내용</th>
+	<td><textarea style="height:200px"></textarea></td>
+</tr>
+</table>
+
+
+</body>
+</html>

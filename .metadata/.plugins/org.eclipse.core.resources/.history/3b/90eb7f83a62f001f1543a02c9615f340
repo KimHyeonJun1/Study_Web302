@@ -1,0 +1,11 @@
+package model;
+
+import java.sql.Date;
+
+public class EmployeeDTO {
+	private int employee_id, department_id;
+	private String last_name, first_name, name, job_id;
+	private Date hire_date;
+	
+	
+}
