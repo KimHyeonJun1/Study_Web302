@@ -3,11 +3,30 @@ package model;
 import java.sql.Date;
 
 public class EmployeeDTO {
-	private int employee_id, department_id;
-	private String last_name, first_name, name, job_id, department_name, job_title;
+	private int employee_id, department_id, salary;
+	private String last_name, first_name, name, job_id, department_name, job_title, phone_number, email;
 	private Date hire_date;
 	
 	
+	
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public String getPhone_number() {
+		return phone_number;
+	}
+	public void setPhone_number(String phone_number) {
+		this.phone_number = phone_number;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public int getEmployee_id() {
 		return employee_id;
 	}

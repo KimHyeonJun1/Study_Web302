@@ -24,7 +24,7 @@ public class EmployeeList extends HttpServlet {
 		//DB에서 사원목록을 조회해오기
 		HrDAO dao = new HrDAO();
 		ArrayList<EmployeeDTO> list = dao.employeeList();
-
+		
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		
@@ -42,7 +42,6 @@ public class EmployeeList extends HttpServlet {
 		out.print("<col width=\"100px\">");
 		out.print("<col width=\"200px\">");
 		out.print("<col width=\"250px\">");
-		
 		out.print("<col width=\"250px\">");
 		out.print("<col width=\"150px\">");
 		out.print("</colgroup>");
@@ -50,14 +49,15 @@ public class EmployeeList extends HttpServlet {
 		
 		
 		for( EmployeeDTO dto : list) {
-		out.printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>"
-				, dto.getEmployee_id(), dto.getName(), dto.getDepartment_id(), dto.getJob_id(), dto.getHire_date()
+		out.printf("<tr><td>%s</td><td><a href='employeeInfo?id=%s'>%s</a></td><td>%s</td><td>%s</td><td>%s</td></tr>"
+				, dto.getEmployee_id(), dto.getEmployee_id(), dto.getName(), dto.getDepartment_id(), dto.getJob_id(), dto.getHire_date()
 				
 				);
 		  
 		}
 		
 		out.print("</table>");
+		
 		out.print("</body>");
 		out.print("</html>");
 	}

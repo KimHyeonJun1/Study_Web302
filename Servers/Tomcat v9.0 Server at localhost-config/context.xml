@@ -26,4 +26,14 @@
     <!--
     <Manager pathname="" />
     -->
+<!--     DBCP(Database Connection pool) 선언 : DB연결객체를 여러개 생성해두기 -->
+    <Resource name ="hr" auth="Container" type="javax.sql.DataSource"
+    		  driverClassName ="oracle.jdbc.driver.OracleDriver"
+    		  url = "jdbc:oracle:thin:@localhost:1521:xe"
+    		  username = "hr" password = "0000" 
+    			/>
+    
+    
+    
+    
 </Context>
