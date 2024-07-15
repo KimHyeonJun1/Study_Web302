@@ -15,6 +15,25 @@ public class HrDAO {
 	private PreparedStatement ps;
 	private ResultSet rs;
 	
+	
+	//사원정보 변경 저장
+	public void employeeUpdate(EmployeeDTO dto) {
+		connect();
+		
+		String sql;
+		
+		
+		disconnect();
+	}
+	
+	
+	//신규 사원정보 등록 저장
+	public void employeeRegister(EmployeeDTO dto) {
+		
+		
+	}
+	
+	
 	//선택한 사원정보 조회
 	public EmployeeDTO employeeInfo(int employee_id) {
 		connect();
@@ -45,6 +64,8 @@ public class HrDAO {
 				dto.setDepartment_id(rs.getInt("department_id"));
 				dto.setEmployee_id(rs.getInt("employee_id"));
 				dto.setName(rs.getString("name") );
+				dto.setLast_name(rs.getString("last_name"));
+				dto.setFirst_name(rs.getString("first_name"));
 				dto.setHire_date(rs.getDate("hire_date"));
 				dto.setJob_id(rs.getString("job_id"));
 				dto.setPhone_number(rs.getString("phone_number"));

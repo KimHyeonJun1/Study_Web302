@@ -25,6 +25,7 @@ public class EmployeeList extends HttpServlet {
 		HrDAO dao = new HrDAO();
 		ArrayList<EmployeeDTO> list = dao.employeeList();
 		
+		//프리젠테이션로직
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		

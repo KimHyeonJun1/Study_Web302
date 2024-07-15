@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+newFileTemplateName=xml declaration
+org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="xml_new" deleted\="false" description\="\uCFFC\uB9AC\uB9E4\uD37C\uD30C\uC77C" enabled\="true" name\="mapper\uC120\uC5B8">&lt;?xml version\="1.0" encoding\="UTF-8"?&gt;&\#13;\r\n&\#13;\r\n&lt;\!DOCTYPE mapper&\#13;\r\n  PUBLIC "-&\#13;\r\n//mybatis.org//DTD&\#13;\r\n Mapper 3.0//EN"&\#13;\r\n  "&\#13;\r\nhttps\://mybatis.org/dtd/mybatis-3-mapper.dtd&\#13;\r\n"&gt;&\#13;\r\n  &\#13;\r\n&lt;mapper namespace\=""&gt;&\#13;\r\n&\#13;\r\n&lt;/mapper&gt; </template></templates>
 org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart.lastActivePage=1

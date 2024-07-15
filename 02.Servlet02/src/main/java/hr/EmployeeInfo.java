@@ -50,15 +50,13 @@ public class EmployeeInfo extends HttpServlet {
 		out.printf("<tr><th>부서</th><td>%s</td></tr>", dto.getDepartment_name());
 //		out.printf("<tr><th>업무</th><td>%s</td></tr>", dto.getJob_id()); --추가해도 상관없음
 		out.printf("<tr><th>업무정보</th><td>%s</td></tr>", dto.getJob_title());
-		
-
 
 		out.print("</table>");
-		
+		out.print("<button onclick='location=\"employeeModify?id="+dto.getEmployee_id() +"\"'>정보수정</button>");
+// 해볼려다가 포기		out.print("<button onclick='location=\"employeeDelete?id="+dto.getEmployee_id()+"\"'>정보삭제</button>");
 		
 		out.print("</body>");
 		out.print("</html>");
-	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

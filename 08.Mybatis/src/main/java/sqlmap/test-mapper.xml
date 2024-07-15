@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+
+<!-- 1번고객정보조회 -->
+<select id="getCustomer" resultType="model.CustomerDTO">
+select * from customer where id =1
+</select>
+
+<!-- 현재시각조회 -->
+<select id="now" resultType="string">
+select to_char(sysdate, 'hh24:mi:ss') from dual
+</select>
+
+
+<!--  오늘날자 조회 -->
+  <select id="today" resultType="java.sql.Date">
+    select sysdate from dual
+  </select>
+</mapper>
