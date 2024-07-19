@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+  <environments default="development">
+    <environment id="hr">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe"/>
+        <property name="username" value="hr"/>
+        <property name="password" value="0000"/>
+      </dataSource>
+    </environment>
+    <environment id="hanul">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe"/>
+        <property name="username" value="hanul"/>
+        <property name="password" value="0000"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  
+  <!-- 쿼리문을 선언할 매퍼파일 지정 -->
+  <mappers>
+    <mapper resource="sqlmap/boardMapper.xml"/>
+   
+  </mappers>
+  
+</configuration>

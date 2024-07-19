@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-
+//mybatis.org//DTD
+ Mapper 3.0//EN"
+  "
+https://mybatis.org/dtd/mybatis-3-mapper.dtd
+">
+  
+<mapper namespace="board">
+
+
+
+
+	<!-- 게시판신규 등록 -->
+<insert id="registerBoard" >
+insert into board 
+( numb, subject, name, email, nalja, content, password)
+values ( seq_num.nextval, #{subject}, #{name}, #{email}, #{nalja}, #{content}, #{password})
+</insert>
+
+	<!-- 게시판 삭제 -->
+<delete id="deleteBoard">
+delete from board where numb = #{numb}
+</delete>
+
+
+	<!-- 게시판정보 변경저장 -->
+<update id="updateBoard">
+update board
+set subject = #{subject}, email = #{email}, nalja = #{nalja},
+ content = #{content}, password = #{password}
+where numb = #{numb}	 
+</update>
+
+<!-- 선택한 게시판 정보 조회 -->
+<select id="getOneBoard" resultType="board.model.BoardDTO">
+select * from board where numb = #{numb}
+</select>
+
+<!--  게시판 목록조회 -->
+<select id="getListOfBoard" resultType="board.model.BoardDTO">
+select * from board
+order by numb
+</select>
+
+ <!-- 조회수 업데이트 -->
+<update id="checkNumBoard">
+update board 
+set check_num = check_num+1
+where numb = #{numb}
+</update>
+
+	<!-- 게시판 신규등록시 조회수 초기화 -->
+<update id="initializeCheckNumBoard" parameterType="int">
+    update board
+    set check_num = 0
+    where numb = #{numb}
+</update>
+
+
+</mapper> 

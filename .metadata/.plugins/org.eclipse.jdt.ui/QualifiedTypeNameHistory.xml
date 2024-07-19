@@ -11,5 +11,11 @@
     <fullyQualifiedTypeName name="model.CustomerDTO"/>
     <fullyQualifiedTypeName name="model.CustomerDAO"/>
     <fullyQualifiedTypeName name="javax.annotation.Resources"/>
+    <fullyQualifiedTypeName name="level3.InfoCommand"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="mybatis.MybatisFactory"/>
+    <fullyQualifiedTypeName name="oracle.sql.DATE"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="board.UpdateCommand"/>
 </qualifiedTypeNameHistroy>
