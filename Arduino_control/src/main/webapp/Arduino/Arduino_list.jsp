@@ -8,7 +8,7 @@
 	request.setCharacterEncoding("UTF-8");
 	Vector<Arduino2DTO> vlist = null;
 
-    //int totalRecord=0; //전체레코드수
+    int totalRecord=0; //전체레코드수
     int listSize=0;    //현재 읽어온 게시물의 수
 
 	//String check = request.getParameter("check");
